@@ -5,5 +5,139 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".one_time_registration.OneTimeRegistratiom">
+    
+    <ImageView
+        android:id="@+id/language_selection_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/img_language_selection"
+        />
+
+    <TextView
+        android:id="@+id/language_selection_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/language_selection_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Please Choose your Language!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        />
+
+    <!-- Start of language selection -->
+    <LinearLayout
+            android:id="@+id/language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginHorizontal="15dp"
+            app:layout_constraintTop_toBottomOf="@id/language_selection_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/purple_200"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/english_flag_icon"
+                    />
+
+                <TextView
+                    android:id="@+id/language_selction_english"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="English"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    />
+
+                <RadioButton
+                    android:id="@+id/selected_english_langiage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/purple_200"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/kiswahili_flag_icon" />
+
+                <TextView
+                    android:id="@+id/language_selction_kiswahili"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="20dp"
+                    android:text="Kiswahili"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <RadioButton
+                    android:id="@+id/selected_kiswahili_langiage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    /> <!-- Align to the end of the layout -->
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/purple_200"
+                />
+
+        </LinearLayout>
+    <!-- End of language selection -->
+
+
+    <!-- Start of Continue button -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/language"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginHorizontal="15dp"
+        android:text="Continue"
+        android:drawableEnd="@drawable/icon_continue_btn"
+        app:cornerRadius="30dp"
+        />
+    <!-- End of Continue button -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
