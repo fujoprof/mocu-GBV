@@ -5,4 +5,6 @@
     <string name="title_notifications">Notifications</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="terms_and_conditions_description">By agreeing to terms and conditions, you join us in our mission to eradicate GBV and create a more inclusive and equitable world for all</string>
+    <string name="safe_and_secure_description">Trust us to create a safe platform where you can report incidents and receive support without fear </string>
 </resources>

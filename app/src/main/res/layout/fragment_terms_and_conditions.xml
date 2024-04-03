@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".one_time_registration.SafeandSecureFragment">
+    tools:context=".one_time_registration.TermsandConditionsFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
@@ -29,9 +29,9 @@
             <ImageView
                 android:id="@+id/terms_and_condition_image"
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:src="@drawable/safeimg"
+                android:src="@drawable/termsimgv2"
                 />
 
             <TextView
@@ -39,8 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="Safe and Secure"
+                android:text="Terms and Conditions"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textStyle="bold"
                 />
@@ -51,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:text="@string/safe_and_secure_description"
+                android:text="@string/terms_and_conditions_description"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 />
 

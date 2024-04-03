@@ -61,6 +61,6 @@ public class TermsandConditionsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_termsand_conditions, container, false);
+        return inflater.inflate(R.layout.fragment_terms_and_conditions, container, false);
     }
 }

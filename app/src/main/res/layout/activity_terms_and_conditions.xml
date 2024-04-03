@@ -6,9 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".one_time_registration.TermsAndConditionsActivity">
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/one_time_registration_steps"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/one_time_registration_steps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
