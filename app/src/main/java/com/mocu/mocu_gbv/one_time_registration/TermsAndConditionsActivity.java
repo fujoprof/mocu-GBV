@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.widget.RadioButton;
 
 import com.mocu.mocu_gbv.R;
 
 public class TermsAndConditionsActivity extends AppCompatActivity {
 
     ViewPager one_time_registation_steps;
+    RadioButton terms_conditions_step1,safe_secure_step1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

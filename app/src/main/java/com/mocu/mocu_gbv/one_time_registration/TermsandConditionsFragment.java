@@ -2,11 +2,15 @@ package com.mocu.mocu_gbv.one_time_registration;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.RadioButton;
 
 import com.mocu.mocu_gbv.R;
 
@@ -16,6 +20,8 @@ import com.mocu.mocu_gbv.R;
  * create an instance of this fragment.
  */
 public class TermsandConditionsFragment extends Fragment {
+
+    private RadioButton terms_condition_step1,terms_condition_step2,terms_condition_step3;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -51,6 +57,7 @@ public class TermsandConditionsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -62,5 +69,31 @@ public class TermsandConditionsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_terms_and_conditions, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        terms_condition_step1 = view.findViewById(R.id.terms_conditions_step1);
+        terms_condition_step2 = view.findViewById(R.id.terms_conditions_step2);
+        terms_condition_step3 = view.findViewById(R.id.terms_conditions_step3);
+
+        terms_condition_step1.setChecked(true);
+
+        terms_condition_step2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                terms_condition_step2.setChecked(false);
+            }
+        });
+
+        terms_condition_step3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                terms_condition_step3.setChecked(false);
+            }
+        });
+        
     }
 }

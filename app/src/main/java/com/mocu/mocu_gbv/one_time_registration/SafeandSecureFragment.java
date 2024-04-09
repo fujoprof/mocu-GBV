@@ -2,11 +2,15 @@ package com.mocu.mocu_gbv.one_time_registration;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.RadioButton;
 
 import com.mocu.mocu_gbv.R;
 
@@ -21,6 +25,8 @@ public class SafeandSecureFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    private RadioButton safe_secure_step1,safe_secure_step2,safe_secure_step3;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -62,5 +68,31 @@ public class SafeandSecureFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_safeand_secure, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        safe_secure_step1 = view.findViewById(R.id.safe_secure_step1);
+        safe_secure_step2 = view.findViewById(R.id.safe_secure_step2);
+        safe_secure_step3 = view.findViewById(R.id.safe_secure_step3);
+
+        safe_secure_step2.setChecked(true);
+
+        safe_secure_step1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                safe_secure_step1.setChecked(false);
+            }
+        });
+
+        safe_secure_step3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                safe_secure_step3.setChecked(false);
+            }
+        });
+
     }
 }

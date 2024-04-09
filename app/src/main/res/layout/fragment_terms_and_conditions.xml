@@ -77,18 +77,18 @@
             >
 
             <RadioButton
-                android:id="@+id/step1"
+                android:id="@+id/terms_conditions_step1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 />
 
             <RadioButton
-                android:id="@+id/step2"
+                android:id="@+id/terms_conditions_step2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <RadioButton
-                android:id="@+id/step3"
+                android:id="@+id/terms_conditions_step3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 

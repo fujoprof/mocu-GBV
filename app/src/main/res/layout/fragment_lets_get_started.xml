@@ -44,6 +44,8 @@
                 android:layout_height="wrap_content"
                 android:hint="Enter Your Phone-Number"
                 app:cornerRadius="30dp"
+                android:background="@drawable/form_field"
+                android:drawableStart="@drawable/ic_call"
                 android:inputType="phone"/>
 
         </LinearLayout>
@@ -61,20 +63,10 @@
         >
 
         <Button
-            android:id="@+id/let_get_started_visible"
+            android:id="@+id/let_get_started_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Let's Get Started"
-            app:cornerRadius="30dp"
-            android:backgroundTint="@android:color/darker_gray"
-            />
-
-        <Button
-            android:id="@+id/let_get_started_invisible"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Let's Get Started"
-            android:visibility="gone"
             app:cornerRadius="30dp"
             android:backgroundTint="@color/purple_200"
             />
